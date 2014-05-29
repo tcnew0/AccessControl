@@ -6,8 +6,12 @@ create table group_info(
 	id integer(10) primary key not null,
 	group_num varchar(200),
 	group_name varchar(255),
-	description varchar(255),
-	use_flag tinyint(1)
+	description varchar(255),	
+	use_flag tinyint(1),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp
 )engine=innodb default charset=utf8;
 
 create table user(
@@ -22,8 +26,24 @@ create table user(
 	phone varchar(20),
 	description varchar(255),
 	use_flag tinyint(1),
-	groupid integer(10),
-foreign key(groupid) references group_info(id) on delete cascade on update cascade
+	group_id integer(10),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp,
+foreign key(group_id) references group_info(id) on delete cascade on update cascade
+)engine=innodb default charset=utf8;
+
+create table group_user(
+	id integer(10) primary key not null,
+	group_num varchar(200),
+	login_name varchar(200),
+	user_id integer(10),
+	group_id integer(10),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp
 )engine=innodb default charset=utf8;
 
 create table role(
@@ -31,7 +51,11 @@ create table role(
 	role_name varchar(255),
 	role_num varchar(200),
 	description varchar(255),
-	use_flag tinyint(1)
+	use_flag tinyint(1),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp
 )engine=innodb default charset=utf8;
 
 create table user_role(
@@ -39,10 +63,14 @@ create table user_role(
 	login_name varchar(200),
 	role_num varchar(200),
 	description varchar(255),
-	userid integer(10),
-	roleid integer(10),
-foreign key(userid) references user(id) on delete cascade on update cascade,
-foreign key(roleid) references role(id) on delete cascade on update cascade
+	user_id integer(10),
+	role_id integer(10),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp,
+foreign key(user_id) references user(id) on delete cascade on update cascade,
+foreign key(role_id) references role(id) on delete cascade on update cascade
 )engine=innodb default charset=utf8;
 
 create table menu(
@@ -51,56 +79,80 @@ create table menu(
 	menu_name varchar(100),
 	parent_menu integer(10),
 	use_flag tinyint(1),
-	description varchar(255)
+	description varchar(255),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp
 )engine=innodb default charset=utf8;
 
 create table menu_project(
 	id integer(10) primary key not null,
 	project varchar(200),
 	project_name varchar(100),
-	menuid integer(10),
-foreign key(menuid) references menu(id) on delete cascade on update cascade
+	menu_id integer(10),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp,
+foreign key(menu_id) references menu(id) on delete cascade on update cascade
 )engine=innodb default charset=utf8;
 
 
 create table user_menu(
 	id integer(10) primary key not null,
 	description varchar(255),
-	userid integer(10),
-	menuid integer(10),
-	menu_projectid integer(10),
-foreign key(userid) references user(id) on delete cascade on update cascade,
-foreign key(menuid) references menu(id) on delete cascade on update cascade,
-foreign key(menu_projectid) references menu_project(id) on delete cascade on update cascade
+	user_id integer(10),
+	menu_id integer(10),
+	project_id integer(10),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp,
+foreign key(user_id) references user(id) on delete cascade on update cascade,
+foreign key(menu_id) references menu(id) on delete cascade on update cascade,
+foreign key(project_id) references menu_project(id) on delete cascade on update cascade
 )engine=innodb default charset=utf8;
 
 create table role_menu(
 	id integer(10) primary key not null,
 	description varchar(255),
-	roleid integer(10),
-	menuid integer(10),
-	menu_projectid integer(10),
-foreign key(roleid) references role(id) on delete cascade on update cascade,
-foreign key(menuid) references menu(id) on delete cascade on update cascade,
-foreign key(menu_projectid) references menu_project(id) on delete cascade on update cascade
+	role_id integer(10),
+	menu_id integer(10),
+	project_id integer(10),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp,
+foreign key(role_id) references role(id) on delete cascade on update cascade,
+foreign key(menu_id) references menu(id) on delete cascade on update cascade,
+foreign key(project_id) references menu_project(id) on delete cascade on update cascade
 )engine=innodb default charset=utf8;
 
 create table op_info(
 	id integer(10) primary key not null,
 	op_num varchar(200),
 	op_name varchar(255),
-	description varchar(255)
+	description varchar(255),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp
 )engine=innodb default charset=utf8;
 
 create table menu_op(
 	id integer(10) primary key not null,
 	use_flag tinyint(1),
-	menuid integer(10),
-	operatorid integer(10),
-	menu_projectid integer(10),
-foreign key(menuid) references menu(id) on delete cascade on update cascade,
-foreign key(operatorid) references op_info(id) on delete cascade on update cascade,
-foreign key(menu_projectid) references menu_project(id) on delete cascade on update cascade
+	menu_id integer(10),
+	operator_id integer(10),
+	project_id integer(10),
+	create_user integer(10),
+	create_time timestamp,
+	update_user integer(10),
+	update_time timestamp,
+foreign key(menu_id) references menu(id) on delete cascade on update cascade,
+foreign key(operator_id) references op_info(id) on delete cascade on update cascade,
+foreign key(project_id) references menu_project(id) on delete cascade on update cascade
 )engine=innodb default charset=utf8;
 
 
