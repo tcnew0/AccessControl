@@ -1,7 +1,7 @@
 package com.zzb.competence.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by zhaozb on 14-5-20.
@@ -45,7 +45,7 @@ public class User {
     private User createUser;
 
     @Column(name="create_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
     @ManyToOne
@@ -53,7 +53,7 @@ public class User {
     private User updateUser;
 
     @Column(name="update_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
     public User() {

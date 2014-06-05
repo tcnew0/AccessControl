@@ -21,61 +21,65 @@
 
     </developers>
 
+    <properties>
+        <spring.version>4.0.3.RELEASE</spring.version>
+    </properties>
+
 	<dependencies>
 		<!-- spring mvc -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring webmvc -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
 		<!-- spring context -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring-aop -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring core-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring beans-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!--spring aspects-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring test -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -83,21 +87,21 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring orm -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring orm -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>3.2.8.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- spring data jpa -->
@@ -118,7 +122,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
-            <version>1.5.2.RELEASE</version>
+            <version>1.7.2.RELEASE</version>
         </dependency>
 
         <!--hibernate-->
@@ -156,6 +160,13 @@
             <version>3.3.2</version>
         </dependency>
 
+        <!--log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
 		<!-- servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -171,5 +182,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 
 </project>

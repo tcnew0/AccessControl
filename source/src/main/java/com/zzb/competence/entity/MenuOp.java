@@ -1,7 +1,7 @@
 package com.zzb.competence.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by zhaozb on 14-5-21.
@@ -13,7 +13,7 @@ public class MenuOp {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
 
-    @Column(name="user_flag")
+    @Column(name="use_flag")
     private boolean useFlag;
 
     @ManyToOne
@@ -33,7 +33,7 @@ public class MenuOp {
     private User createUser;
 
     @Column(name="create_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
     @ManyToOne
@@ -41,7 +41,7 @@ public class MenuOp {
     private User updateUser;
 
     @Column(name="update_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
     public MenuOp() {

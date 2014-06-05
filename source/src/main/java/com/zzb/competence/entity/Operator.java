@@ -1,13 +1,13 @@
 package com.zzb.competence.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by zhaozb on 14-5-20.
  */
 @Entity
-@Table(name="Operator")
+@Table(name="Op_info")
 public class Operator{
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -26,7 +26,7 @@ public class Operator{
     private User createUser;
 
     @Column(name="create_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
     @ManyToOne
@@ -34,7 +34,7 @@ public class Operator{
     private User updateUser;
 
     @Column(name="update_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
     public Operator() {

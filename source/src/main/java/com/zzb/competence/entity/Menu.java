@@ -1,7 +1,7 @@
 package com.zzb.competence.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.Set;
 
 /**
@@ -27,7 +27,7 @@ public class Menu {
     @JoinColumn(name="parent_menu")
     private Menu pMenu;
 
-    @OneToMany(cascade = {CascadeType.ALL},mappedBy = "parent_menu")
+    @OneToMany(cascade = {CascadeType.ALL},mappedBy = "pMenu")
     private Set<Menu> cMenuList;
 
     @Column(name = "use_flag")
@@ -40,7 +40,7 @@ public class Menu {
     private User createUser;
 
     @Column(name="create_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
 
     @ManyToOne
@@ -48,7 +48,7 @@ public class Menu {
     private User updateUser;
 
     @Column(name="update_time")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
     public Menu() {
