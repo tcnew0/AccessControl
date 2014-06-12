@@ -1,6 +1,7 @@
 package com.zzb.competence.controller.common;
 
 import com.zzb.competence.controller.BaseController;
+import com.zzb.competence.util.common.Constants;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,9 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("login")
 public class LoginController extends BaseController{
 
+
+    /**
+     * 登陆跳转到主页面
+     * @return
+     */
     @RequestMapping("login")
     public String login(){
 
-        return LOGIN;
+        return Constants.INDEX_PAGES.MAIN;
     }
 }

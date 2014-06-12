@@ -8,13 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="shortcut icon" href="../../../images/icon/logo.png"/>
     <link rel="stylesheet" href="../../../css/signin.css"/>
     <link rel="stylesheet" href="../../../plug/bootstrap/css/bootstrap.min.css"/>
     <title></title>
 </head>
 <body>
     <div class="container">
-        <form class="form-signin">
+        <form class="form-signin" action="/login/login.do">
             <h2 class="form-signin-heading">请登录</h2>
             <input class="form-control" type="text" autofocus="" required="" placeholder="Email address"/>
             <input class="form-control" type="password" required="" placeholder="Password"/>

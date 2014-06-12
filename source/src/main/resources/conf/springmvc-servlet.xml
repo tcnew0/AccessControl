@@ -18,7 +18,7 @@
 
     <mvc:default-servlet-handler />
 
-    <mvc:view-controller path="/" view-name="redirect:/index/"/>
+    <mvc:view-controller path="/" view-name="redirect:/index/index"/>
 
 	<bean id="defalutViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/jsp/"

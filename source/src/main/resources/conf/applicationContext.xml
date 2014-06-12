@@ -19,9 +19,19 @@
     <!-- 配置Spring Data JPA扫描目录-->
     <jpa:repositories base-package="com.zzb.competence.dao" repository-impl-postfix="Impl"></jpa:repositories>
 
+    <!--数据源 -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+             scope="singleton">
+        <property name="driverClassName">
+            <value>org.logicalcobwebs.proxool.ProxoolDriver</value>
+        </property>
+        <property name="url" value="proxool.db_pool"></property>
+    </bean>
+
     <!-- 配置JPA实体管理器工厂 -->
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="persistenceUnitName" value="pUnit" />
+        <property name="dataSource" ref="dataSource"/>
         <property name="persistenceXmlLocation" value="classpath*:/conf/persistence.xml" />
     </bean>
 
