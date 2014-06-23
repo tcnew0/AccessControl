@@ -20,4 +20,13 @@ public class CommonController extends BaseController{
     public String index(){
         return Constants.INDEX_PAGES.INDEX;
     }
+
+    /**
+     * iframe
+     * @return
+     */
+    @RequestMapping("iframe")
+    public String frame(){
+        return Constants.INDEX_PAGES.IFRAME;
+    }
 }

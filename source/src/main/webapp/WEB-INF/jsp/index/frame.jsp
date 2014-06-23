@@ -7,8 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<head>
+    <link rel="stylesheet" href="../../../plug/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../../css/main.css"/>
+</head>
+
 <body>
-<div class="col-xs-12 col-sm-9" id="content">
+<div>
+<div class="col-xs-12 col-sm-9">
     <p class="pull-right visible-xs">
         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
     </p>
@@ -19,7 +25,7 @@
     </div>
 
     <div class="row">
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-6 col-sm-4 col-lg-4">
             <h2>人员管理</h2>
             <p>人员管理，主要用于对人员的新增、修改、删除、查询等进行管理。</p>
             <p>
@@ -27,7 +33,7 @@
             </p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-6 col-sm-4 col-lg-4">
             <h2>部门管理</h2>
             <p>部门管理，主要用于对部门的新增、修改、删除、查询等进行管理。</p>
             <p>
@@ -35,7 +41,7 @@
             </p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-6 col-sm-4 col-lg-4">
             <h2>角色管理</h2>
             <p>角色管理，主要用于对角色的新增、修改、删除、查询等进行管理。</p>
             <p>
@@ -43,7 +49,7 @@
             </p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-6 col-sm-4 col-lg-4">
             <h2>菜单管理</h2>
             <p>菜单管理，主要用于对菜单的新增、修改、删除、查询等进行管理。</p>
             <p>
@@ -51,7 +57,7 @@
             </p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-6 col-sm-4 col-lg-4">
             <h2>操作管理</h2>
             <p>操作管理，主要用于对操作的新增、修改、删除、查询等进行管理。</p>
             <p>
@@ -59,7 +65,7 @@
             </p>
         </div>
 
-        <div class="col-6 col-sm-6 col-lg-4">
+        <div class="col-6 col-sm-4 col-lg-4">
             <h2>审批管理</h2>
             <p>审批管理，主要用于对审批的新增、修改、删除、查询等进行管理。</p>
             <p>
@@ -69,5 +75,19 @@
     </div>
 </div>
 
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+    <div class="list-group">
+        <a href="#" class="list-group-item active">历史记录</a>
+        <a href="#" class="list-group-item">历史记录1</a>
+        <a href="#" class="list-group-item">历史记录2</a>
+        <a href="#" class="list-group-item">历史记录3</a>
+        <a href="#" class="list-group-item">历史记录4</a>
+        <a href="#" class="list-group-item">历史记录5</a>
+        <a href="#" class="list-group-item">历史记录6</a>
+        <a href="#" class="list-group-item">历史记录7</a>
+        <a href="#" class="list-group-item">历史记录8</a>
+    </div>
+</div>
+</div>
 </body>
 </html>

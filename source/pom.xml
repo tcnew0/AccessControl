@@ -201,6 +201,19 @@
         </dependency>
         <!-- proxool end-->
 
+        <!-- jstl.jar -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- stander.jar -->
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
 		<!-- servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

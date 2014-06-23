@@ -6,15 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="header.jsp"%>
 <html>
 <head>
     <title>菜单权限管理</title>
-    <link rel="shortcut icon" href="../../../images/icon/logo.png"/>
-    <link rel="stylesheet" href="../../../plug/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../../../css/main.css"/>
-    <script type="text/javascript" src="../../../javascript/jquery/1.11.1/jquery-1.11.1.js"></script>
-    <script type="text/javascript" src="../../../plug/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../../javascript/myJS/main.js"></script>
+    <link rel="shortcut icon" href="${contextPath}/images/icon/logo.png"/>
+    <link rel="stylesheet" href="${contextPath}/css/main.css"/>
+    <script type="text/javascript" src="${contextPath}/javascript/myJS/main.js"></script>
 </head>
 <body>
 <!-- head -->
@@ -27,24 +25,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">首页</a>
+            <a class="navbar-brand" href="">首页</a>
         </div>
 
         <!-- center -->
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="">主菜单</a></li>
-                <li><a href="/group/manage">部门管理</a></li>
-                <li><a href="#">人员管理</a></li>
-                <li><a href="#">角色管理</a></li>
-                <li><a href="#">菜单管理</a></li>
-                <li><a href="#">操作管理</a></li>
-                <li><a href="#">流程管理</a></li>
+            <ul class="nav navbar-nav menu">
+                <%--<li class="active"><a href="">主菜单</a></li>--%>
+                <li><a rel="/group/manage">部门管理</a></li>
+                <li><a rel="/user/manage">人员管理</a></li>
+                <li><a rel="/role/manage">角色管理</a></li>
+                <li><a rel="#">菜单管理</a></li>
+                <li><a rel="#">操作管理</a></li>
+                <li><a rel="#">流程管理</a></li>
             </ul>
 
             <!-- right -->
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">test</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -64,21 +61,24 @@
 <!-- body -->
 <div class="container">
     <div class="row row-offcanvas row-offcanvas-right">
-        <%--<iframe src="/index/frame" frameborder="0"></iframe>--%>
-        <%@include file="frame.jsp"  %>
-        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">历史记录</a>
-                <a href="#" class="list-group-item">历史记录1</a>
-                <a href="#" class="list-group-item">历史记录2</a>
-                <a href="#" class="list-group-item">历史记录3</a>
-                <a href="#" class="list-group-item">历史记录4</a>
-                <a href="#" class="list-group-item">历史记录5</a>
-                <a href="#" class="list-group-item">历史记录6</a>
-                <a href="#" class="list-group-item">历史记录7</a>
-                <a href="#" class="list-group-item">历史记录8</a>
-            </div>
-        </div>
+        <%--<div class="col-xs-12 col-sm-9" id="content">--%>
+            <iframe src="/index/iframe" frameborder="0" width="100%" height="850" name="content" id="content"></iframe>
+        <%--</div>--%>
+
+        <%--<%@include file="frame.jsp"  %>--%>
+        <%--<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">--%>
+            <%--<div class="list-group">--%>
+                <%--<a href="#" class="list-group-item active">历史记录</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录1</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录2</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录3</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录4</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录5</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录6</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录7</a>--%>
+                <%--<a href="#" class="list-group-item">历史记录8</a>--%>
+            <%--</div>--%>
+        <%--</div>--%>
 
     </div>
 

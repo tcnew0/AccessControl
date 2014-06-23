@@ -14,6 +14,10 @@ public class Constants {
 
         /** 主页面 */
         public static final String MAIN = "index/main";
+
+        /** 默认iframe */
+        public static final String IFRAME = "index/frame";
+
     }
 
     /**
@@ -23,5 +27,23 @@ public class Constants {
 
         /** 部门管理主页面　*/
         public static final String MANAGE = "group/group_manage";
+    }
+
+    /**
+     * 人员 model view
+     */
+    public static interface USER_PAGES{
+
+        /**人员管理主界面 */
+        public static final String MANAGE = "user/user_manage";
+    }
+
+    /**
+     * 角色 model view
+     */
+    public static interface ROLE_PAGES{
+
+        /**角色管理主界面 */
+        public static final String MANAGE = "role/role_manage";
     }
 }
