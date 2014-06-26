@@ -5738,7 +5738,7 @@ button.close {
     left: 0;
     z-index: 1010;
     display: none;
-    max-width: 276px;
+    max-width: 476px;/*old value is 276,modify by zhaozb at 20140625 */
     padding: 1px;
     text-align: left;
     background-color: #fff;

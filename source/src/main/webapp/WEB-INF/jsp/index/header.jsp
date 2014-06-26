@@ -13,14 +13,11 @@
 <html>
 <head>
     <link rel="stylesheet" href="${contextPath}/plug/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="${contextPath}/plug/jquery-ui/css/cupertino/jquery-ui-1.10.4.custom.css"/>
-    <%--<link rel="stylesheet" href="${contextPath}/css/main.css"/>--%>
+    <%--<link rel="stylesheet" href="${contextPath}/plug/jquery-ui/css/cupertino/jquery-ui-1.10.4.custom.css"/>--%>
+    <link rel="stylesheet" href="${contextPath}/css/base.css"/>
     <script type="text/javascript" src="${contextPath}/javascript/jquery/1.11.1/jquery-1.11.1.js"></script>
+    <%--<script type="text/javascript" src="${contextPath}/plug/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>--%>
     <script type="text/javascript" src="${contextPath}/plug/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="${contextPath}/plug/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
     <script type="text/javascript" src="${contextPath}/javascript/myJS/Base.js"></script>
 </head>
-<body>
-
-</body>
 </html>

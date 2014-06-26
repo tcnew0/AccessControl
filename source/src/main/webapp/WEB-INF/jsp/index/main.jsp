@@ -32,12 +32,12 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav menu">
                 <%--<li class="active"><a href="">主菜单</a></li>--%>
-                <li><a rel="/group/manage">部门管理</a></li>
-                <li><a rel="/user/manage">人员管理</a></li>
-                <li><a rel="/role/manage">角色管理</a></li>
-                <li><a rel="#">菜单管理</a></li>
-                <li><a rel="#">操作管理</a></li>
-                <li><a rel="#">流程管理</a></li>
+                <li><a rel="/group/manage" href="#">部门管理</a></li>
+                <li><a rel="/user/manage" href="#">人员管理</a></li>
+                <li><a rel="/role/manage" href="#">角色管理</a></li>
+                <li><a rel="#" href="#">菜单管理</a></li>
+                <li><a rel="#" href="#">操作管理</a></li>
+                <li><a rel="#" href="#">流程管理</a></li>
             </ul>
 
             <!-- right -->

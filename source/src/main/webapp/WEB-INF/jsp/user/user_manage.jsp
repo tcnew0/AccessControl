@@ -47,6 +47,7 @@
         </form>
 
         <table class="table">
+            <thead>
             <tr>
                 <th>人员编号</th>
                 <th>人员名称</th>
@@ -54,6 +55,7 @@
                 <th>联系方式</th>
                 <th>操作</th>
             </tr>
+            </thead>
             <tbody>
             <tr>
                 <td>y1</td>

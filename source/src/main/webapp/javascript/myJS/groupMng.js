@@ -2,28 +2,25 @@
  * Created by guanzhenxing on 2014-06-21.
  */
 $(function(){
-    $("#group_add_view").dialog({
-        autoOpen : false,
-        height : 400,
-        width : 600,
-        modal : true,
-        buttons :[{
-            text : '确认',
-            click : function(){
-                //
-                alert('test');
-            }
-        },{
-            text : '取消',
-            click : function(){
-                $(this).dialog('close');
-            }
-        }]
+    // tips 提示初始化
+    //$("#tt").tooltip();
+//    $("a[data-placement]").each(function(){
+//        $(this).tooltip();
+//    });
+
+    // 弹出框初始化
+    $(".table tbody tr td a[data-toggle='popover']").each(function(){
+        $(this).popover({
+            placement : 'left',
+            html : true
+        });
     });
 
-    // button to open dialog
-    $("#group_add_btn").click(function () {
-        $("#group_add_view").dialog("open");
+    // table tr 离开事件
+    $(".table tbody tr").mouseleave(function(){
+        $(this).find("td a[data-toggle='popover']").each(function(){
+            $(this).popover("hide");
+        });
     });
 
     // checkbox event
@@ -40,4 +37,29 @@ $(function(){
             });
         }
     });
+
+    $("a[op-type='modify']").click(function(){
+        $("#grpModal").modal("show");
+    });
+    // 提交请求
+//    $("#group_submit_btn").click(function(){
+//        var checked = true;
+//        // 验证
+//        $(".modal-body form[name='group_add_form']").find("[required]").each(function(){
+//            if(checkIsNull($(this).html())){
+//                $(this).parent().parent().addClass("has-error");
+//                checked = false;
+//            }else{
+//                $(this).parent().parent().removeClass("has-error");
+//            }
+//        });
+
+        // 通过
+//        if(checked){
+//            // submit
+//
+//            // hide modal
+//            $("#grpModal").modal("hide");
+//        }
+//    });
 });
