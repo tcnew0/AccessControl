@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name="Menu_op")
 public class MenuOp {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
     @Column(name="use_flag")

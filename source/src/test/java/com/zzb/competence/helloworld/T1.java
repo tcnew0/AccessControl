@@ -10,7 +10,7 @@ public class T1<T,M> {
     private Class<M> clazzM;
     T1(){
         this.clazzT = (Class<T>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
-        this.clazzM = (Class<M>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+        this.clazzM = (Class<M>)((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[1];
     }
 
     public Class<T> getClazzT() {
@@ -19,6 +19,10 @@ public class T1<T,M> {
 
     public Class<M> getClazzM() {
         return clazzM;
+    }
+
+    public String getMName(){
+        return clazzM.getCanonicalName();
     }
 }
 

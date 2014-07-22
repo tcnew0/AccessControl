@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 /**
  * Created by zhaozb on 14-5-28.
  */
+@Repository("userDao")
 public interface UserDaoImpl extends BaseDao<User,Long>{
-
+    public User findByName(String name);
 }

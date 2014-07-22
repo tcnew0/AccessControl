@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name="role_menu")
 public class RoleMenuRel {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
     @Column(name="description",length = 255)

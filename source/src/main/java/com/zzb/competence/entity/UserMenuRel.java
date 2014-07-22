@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name="user_menu")
 public class UserMenuRel {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
     private String description;

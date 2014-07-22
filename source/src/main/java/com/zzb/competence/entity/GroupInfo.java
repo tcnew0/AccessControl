@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name="Group_info")
 public class GroupInfo {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
     @Column(name="group_num",length = 200)

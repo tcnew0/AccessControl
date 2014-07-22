@@ -43,9 +43,9 @@
         <!-- 搜索条件 -->
         <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="关键字">
+                <input type="text" class="form-control" placeholder="关键字" name="search_key" id="search_key">
             </div>
-            <button type="submit" class="btn btn-default">搜索</button>
+            <button class="btn btn-default" id="grp_search_btn" >搜索</button>
         </form>
 
         <table class="table table-hover">
@@ -100,7 +100,7 @@
                 <td>hhb</td>
                 <td>123</td>
                 <td>
-                    <a id="tt" href="#" data-placement="top" title="点击查看详情">查看</a>&nbsp;&nbsp;
+                    <a id="tt" href="#" data-placement="top" title="点击查看详情">查看</a></a></a>&nbsp;&nbsp;
                     <a>修改</a>
                 </td>
             </tr>

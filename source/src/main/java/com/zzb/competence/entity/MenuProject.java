@@ -11,7 +11,7 @@ import java.util.Set;
 @Table(name="Menu_project")
 public class MenuProject {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
 
     @Column(name="project",length = 200)

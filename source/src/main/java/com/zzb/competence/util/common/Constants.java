@@ -46,4 +46,29 @@ public class Constants {
         /**角色管理主界面 */
         public static final String MANAGE = "role/role_manage";
     }
+
+    public static interface PROJECT_INFO{
+
+        /**base package */
+        public static final String BASE_PAKAGE = "com.zzb.competence";
+    }
+
+    /**
+     * 状态
+     */
+    public static interface STATUS{
+
+        /**
+         * 部门状态
+         */
+        public static interface GROUP{
+
+            /** 可用 */
+            public static final boolean ACTIVE = true;
+
+            /** 不可用 */
+            public static final boolean IN_ACTIVE = false;
+        }
+    }
+
 }

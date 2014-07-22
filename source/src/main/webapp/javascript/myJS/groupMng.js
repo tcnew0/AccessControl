@@ -2,6 +2,7 @@
  * Created by guanzhenxing on 2014-06-21.
  */
 $(function(){
+
     // tips 提示初始化
     //$("#tt").tooltip();
 //    $("a[data-placement]").each(function(){
@@ -41,6 +42,14 @@ $(function(){
     $("a[op-type='modify']").click(function(){
         $("#grpModal").modal("show");
     });
+
+    // 搜索
+    $("#grp_search_btn").click(function(){
+        var test = $("#search_key").val();
+
+    });
+
+
     // 提交请求
 //    $("#group_submit_btn").click(function(){
 //        var checked = true;
