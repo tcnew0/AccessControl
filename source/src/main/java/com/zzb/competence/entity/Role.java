@@ -20,7 +20,7 @@ public class Role {
     private String roleName;
 
     @Column(name="use_flag")
-    private boolean useFlag;
+    private Boolean useFlag;
 
     @Column(name="description",length = 255)
     private String description;
@@ -44,7 +44,7 @@ public class Role {
     public Role() {
     }
 
-    public Role(String roleNum, String roleName, boolean useFlag, String description, User createUser, Date createTime, User updateUser, Date updateTime) {
+    public Role(String roleNum, String roleName, Boolean useFlag, String description, User createUser, Date createTime, User updateUser, Date updateTime) {
         this.roleNum = roleNum;
         this.roleName = roleName;
         this.useFlag = useFlag;
@@ -67,7 +67,7 @@ public class Role {
         this.roleName = roleName;
     }
 
-    public void setUseFlag(boolean useFlag) {
+    public void setUseFlag(Boolean useFlag) {
         this.useFlag = useFlag;
     }
 
@@ -119,7 +119,7 @@ public class Role {
         return roleName;
     }
 
-    public boolean isUseFlag() {
+    public Boolean isUseFlag() {
         return useFlag;
     }
 

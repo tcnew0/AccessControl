@@ -1,5 +1,9 @@
 package com.zzb.competence.entity;
 
+import com.alibaba.fastjson.JSON;
+import com.zzb.competence.bean.BaseBean;
+import jdk.nashorn.internal.runtime.JSONFunctions;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -8,7 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="Group_info")
-public class GroupInfo {
+public class GroupInfo extends BaseBean{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
@@ -20,7 +24,7 @@ public class GroupInfo {
     private String groupName;
 
     @Column(name="use_flag")
-    private boolean useFlag;
+    private Boolean useFlag;
 
     @Column(name="description",length = 255)
     private String description;
@@ -44,7 +48,7 @@ public class GroupInfo {
     public GroupInfo() {
     }
 
-    public GroupInfo(String groupNum, String groupName, boolean useFlag, String description, User createUser, Date createTime, User updateUser, Date updateTime) {
+    public GroupInfo(String groupNum, String groupName, Boolean useFlag, String description, User createUser, Date createTime, User updateUser, Date updateTime) {
         this.groupNum = groupNum;
         this.groupName = groupName;
         this.useFlag = useFlag;
@@ -112,11 +116,11 @@ public class GroupInfo {
         this.groupName = groupName;
     }
 
-    public boolean isUseFlag() {
+    public Boolean isUseFlag() {
         return useFlag;
     }
 
-    public void setUseFlag(boolean useFlag) {
+    public void setUseFlag(Boolean useFlag) {
         this.useFlag = useFlag;
     }
 
@@ -127,4 +131,5 @@ public class GroupInfo {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

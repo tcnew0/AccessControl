@@ -28,6 +28,7 @@
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <hibernate.version>4.3.5.Final</hibernate.version>
         <proxool.version>0.9.1</proxool.version>
+        <fastjson.version>1.1.41</fastjson.version>
     </properties>
 
 	<dependencies>
@@ -214,6 +215,14 @@
             <artifactId>standard</artifactId>
             <version>1.1.2</version>
         </dependency>
+
+        <!--fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
 		<!-- servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

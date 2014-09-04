@@ -6,11 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ include file="../index/header.jsp"%>
 <html>
 <head>
-    <link rel="shortcut icon" href="../../../images/icon/logo.png"/>
+    <%--<link rel="shortcut icon" href="../../../images/icon/logo.png"/>--%>
     <link rel="stylesheet" href="../../../css/signin.css"/>
-    <link rel="stylesheet" href="../../../plug/bootstrap/css/bootstrap.min.css"/>
+    <%--<link rel="stylesheet" href="../../../plug/bootstrap/css/bootstrap.min.css"/>--%>
     <title></title>
 </head>
 <body>

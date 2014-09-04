@@ -65,4 +65,19 @@
     <!-- 注入自定义 BeanFactory -->
     <bean id="myBeanFactory" class="com.zzb.competence.util.context.MyBeanFactory"></bean>
 
+    <!-- 国际化获取 -->
+    <bean id="commonMessage" class="com.zzb.competence.util.context.CommonMessage"></bean>
+
+    <!--加载国际化文件 -->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="basenames">
+            <list>
+                <value>/WEB-INF/i18n/message_zh_CN</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 异常处理 -->
+    <bean id="exceptionHandler" class="com.zzb.competence.util.exception.BusinessExceptionHandler"/>
 </beans>

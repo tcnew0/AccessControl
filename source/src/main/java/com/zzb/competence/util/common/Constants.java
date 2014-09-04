@@ -27,6 +27,9 @@ public class Constants {
 
         /** 部门管理主页面　*/
         public static final String MANAGE = "group/group_manage";
+
+        /** 部门管理列表页面　*/
+        public static final String FRAME = "group/group_list_frame";
     }
 
     /**
@@ -36,6 +39,9 @@ public class Constants {
 
         /**人员管理主界面 */
         public static final String MANAGE = "user/user_manage";
+
+        /** 人员列表页面　*/
+        public static final String FRAME = "user/user_list_frame";
     }
 
     /**
@@ -71,4 +77,47 @@ public class Constants {
         }
     }
 
+    /**
+     * 分页常量
+     */
+    public static interface PAGE_INFO{
+        /** 页 */
+        public static final String CUR_PAGE = "curPage";
+
+        /** 尺寸 */
+        public static final String PAGE_SIZE = "pageSize";
+
+        /** 总数 */
+        public static final String TOTAL = "pageTotal";
+
+        /** 默认当前页 */
+        public static final int DEFAULT_CUR_PAGE = 1;
+
+        /** 默认尺寸 */
+        public static final int DEFAULT_PAGE_SIZE = 6;
+
+        /** 页数 */
+        public static final int DEFAULT_PAGE_CNT = 5;
+    }
+
+    /**
+     * 数据库相关常量
+     */
+    public static interface SQL_CONSTANTS{
+
+        /** escape */
+        public static final String ESCAPE = "|";
+    }
+
+    public static interface DATE_FORMAT{
+
+        /** yyyy-MM-dd */
+        public static final String DF_yyyy$MM$dd = "yyyy-MM-dd";
+
+        /** yyyy-MM-dd 24小时*/
+        public static final String DF_yyyy$MM$dd$HH$mm$ss = "yyyy-MM-dd HH:mm:ss";
+
+        /** yyyy-MM-dd 12小时*/
+        public static final String DF_yyyy$MM$dd$hh$mm$ss = "yyyy-MM-dd hh:mm:ss";
+    }
 }

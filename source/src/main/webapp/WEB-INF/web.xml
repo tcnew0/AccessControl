@@ -54,6 +54,15 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <servlet-name>springMvc</servlet-name>
+    </filter-mapping>
+
     <!-- spring mvc -->
     <servlet>
         <servlet-name>springMvc</servlet-name>
@@ -69,6 +78,7 @@
   		<servlet-name>springMvc</servlet-name>
   		<url-pattern>/</url-pattern>
   </servlet-mapping>
+
     <!--<servlet-mapping>-->
         <!--<servlet-name>springMvc</servlet-name>-->
         <!--<url-pattern>*.html</url-pattern>-->
@@ -84,4 +94,16 @@
         <url-pattern>/admin</url-pattern>
     </servlet-mapping>
 
+    <!-- 错误页面 -->
+    <!-- 500 -->
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/jsp/error/inner_error.jsp</location>
+    </error-page>
+
+    <!-- 404 -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error/inner_error.jsp</location>
+    </error-page>
 </web-app>

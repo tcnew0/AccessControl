@@ -20,6 +20,15 @@
 
     <mvc:view-controller path="/" view-name="redirect:/index/index"/>
 
+    <!-- 拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，顺序执行 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <bean class="com.zzb.competence.util.interceptor.CommonInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
 	<bean id="defalutViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/WEB-INF/jsp/"
 		p:suffix=".jsp"

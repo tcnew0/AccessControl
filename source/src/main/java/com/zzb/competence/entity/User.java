@@ -1,5 +1,9 @@
 package com.zzb.competence.entity;
 
+import com.zzb.competence.bean.BaseBean;
+import com.zzb.competence.dao.BaseDao;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -8,7 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "User")
-public class User {
+public class User extends BaseBean{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +26,7 @@ public class User {
 
     private String password;
 
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date birthday;
 
     @Column(name="sex",length = 2)
@@ -38,7 +43,7 @@ public class User {
     private String description;
 
     @Column(name="use_flag")
-    private boolean useFlag;
+    private Boolean useFlag;
 
     @ManyToOne
     @JoinColumn(name="create_user")
@@ -59,7 +64,7 @@ public class User {
     public User() {
     }
 
-    public User(String name, String loginName, String password, Date birthday, String sex, String mail, String address, String phone, String description, boolean useFlag, User createUser, Date createTime, User updateUser, Date updateTime) {
+    public User(String name, String loginName, String password, Date birthday, String sex, String mail, String address, String phone, String description, Boolean useFlag, User createUser, Date createTime, User updateUser, Date updateTime) {
         this.name = name;
         this.loginName = loginName;
         this.password = password;
@@ -156,11 +161,11 @@ public class User {
         this.description = description;
     }
 
-    public boolean isUseFlag() {
+    public Boolean getUseFlag() {
         return useFlag;
     }
 
-    public void setUseFlag(boolean useFlag) {
+    public void setUseFlag(Boolean useFlag) {
         this.useFlag = useFlag;
     }
 
@@ -195,4 +200,5 @@ public class User {
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
 }

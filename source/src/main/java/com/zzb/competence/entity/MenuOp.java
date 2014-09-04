@@ -14,7 +14,7 @@ public class MenuOp {
     private long id;
 
     @Column(name="use_flag")
-    private boolean useFlag;
+    private Boolean useFlag;
 
     @ManyToOne
     @JoinColumn(name="menu_id")
@@ -47,7 +47,7 @@ public class MenuOp {
     public MenuOp() {
     }
 
-    public MenuOp(boolean useFlag, Menu menu, Operator operator, MenuProject menuProject, User createUser, Date createTime, User updateUser, Date updateTime) {
+    public MenuOp(Boolean useFlag, Menu menu, Operator operator, MenuProject menuProject, User createUser, Date createTime, User updateUser, Date updateTime) {
         this.useFlag = useFlag;
         this.menu = menu;
         this.operator = operator;
@@ -66,11 +66,11 @@ public class MenuOp {
         this.id = id;
     }
 
-    public boolean isUseFlag() {
+    public Boolean isUseFlag() {
         return useFlag;
     }
 
-    public void setUseFlag(boolean useFlag) {
+    public void setUseFlag(Boolean useFlag) {
         this.useFlag = useFlag;
     }
 

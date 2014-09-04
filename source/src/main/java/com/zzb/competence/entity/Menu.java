@@ -31,7 +31,7 @@ public class Menu {
     private Set<Menu> cMenuList;
 
     @Column(name = "use_flag")
-    private boolean useFlag;
+    private Boolean useFlag;
 
     private String description;
 
@@ -54,7 +54,7 @@ public class Menu {
     public Menu() {
     }
 
-    public Menu(String menuName, String menuNum, Menu pMenu, Set<Menu> cMenuList, boolean useFlag, String description, User createUser, Date createTime, User updateUser, Date updateTime) {
+    public Menu(String menuName, String menuNum, Menu pMenu, Set<Menu> cMenuList, Boolean useFlag, String description, User createUser, Date createTime, User updateUser, Date updateTime) {
         this.menuName = menuName;
         this.menuNum = menuNum;
         this.pMenu = pMenu;
@@ -107,11 +107,11 @@ public class Menu {
         this.cMenuList = cMenuList;
     }
 
-    public boolean isUseFlag() {
+    public Boolean isUseFlag() {
         return useFlag;
     }
 
-    public void setUseFlag(boolean useFlag) {
+    public void setUseFlag(Boolean useFlag) {
         this.useFlag = useFlag;
     }
 

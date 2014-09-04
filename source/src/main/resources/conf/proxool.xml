@@ -5,7 +5,7 @@ Anything outside the "proxool" tag is ignored. -->
     <proxool>
         <alias>db_pool</alias>
         <!--proxool只能管理由自己产生的连接-->
-        <driver-url>jdbc:mysql://localhost:3306/competence?useUnicode=true&amp;characterEncoding=UTF-8</driver-url>
+        <driver-url>jdbc:mysql://localhost:3306/competence?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull</driver-url>
         <driver-class>com.mysql.jdbc.Driver</driver-class>
         <driver-properties>
             <property name="user" value="root"/>
