@@ -51,6 +51,9 @@ public class Constants {
 
         /**角色管理主界面 */
         public static final String MANAGE = "role/role_manage";
+
+        /** 角色管理列表页面　*/
+        public static final String FRAME = "role/role_list_frame";
     }
 
     public static interface PROJECT_INFO{
@@ -67,7 +70,7 @@ public class Constants {
         /**
          * 部门状态
          */
-        public static interface GROUP{
+        public static interface COMMON{
 
             /** 可用 */
             public static final boolean ACTIVE = true;
@@ -75,6 +78,8 @@ public class Constants {
             /** 不可用 */
             public static final boolean IN_ACTIVE = false;
         }
+
+
     }
 
     /**

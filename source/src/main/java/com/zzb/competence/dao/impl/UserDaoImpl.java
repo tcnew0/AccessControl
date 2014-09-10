@@ -21,6 +21,6 @@ public interface UserDaoImpl extends BaseDao<User,Long>{
      * @param pageable pageable
      * @return Page<User>
      */
-    @Query("select g from User g where g.loginName like :loginName and g.name like :name ")
+    @Query("select g from User g where g.loginName like :loginName and g.name like :name order by g.createTime desc")
     public Page<User> findByLoginNameAndName(@Param("loginName") String loginName,@Param("name")String name, Pageable pageable);
 }

@@ -18,6 +18,6 @@ import java.util.List;
 @Repository("groupDao")
 public interface GroupInfoDaoImpl extends BaseDao<GroupInfo,Long> {
 
-    @Query("select g from GroupInfo g where g.groupName like ?1 and g.groupNum like ?2 ")
+    @Query("select g from GroupInfo g where g.groupName like ?1 and g.groupNum like ?2 order by g.createTime desc")
     public Page<GroupInfo> findByGroupNameAndGroupNum(String groupName,String groupNum, Pageable pageable);
 }

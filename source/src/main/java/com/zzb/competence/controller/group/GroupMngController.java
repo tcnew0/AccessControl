@@ -97,7 +97,7 @@ public class GroupMngController extends CommonController{
         groupInfo.setGroupNum(grpNum);
         groupInfo.setGroupName(grpNum);
         groupInfo.setDescription(description);
-        groupInfo.setUseFlag(Constants.STATUS.GROUP.ACTIVE);
+        groupInfo.setUseFlag(Constants.STATUS.COMMON.ACTIVE);
         groupInfo.setCreateTime(Calendar.getInstance().getTime());
 
         groupService.save(groupInfo);

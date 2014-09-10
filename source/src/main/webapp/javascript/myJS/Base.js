@@ -28,7 +28,7 @@ $(function(){
     // 初始化前段国际化资源文件
     $.i18n.properties({
         name : 'jspMessage',
-        pat : ${contextPath} + '/WEB-INF/i18n/',
+        path :  '/plug/i18n/',
         mode : 'map',
         language : lang,
         cache : true,
