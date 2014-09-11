@@ -35,8 +35,9 @@
                 <li><a rel="/group/manage" href="#">部门管理</a></li>
                 <li><a rel="/user/manage" href="#">人员管理</a></li>
                 <li><a rel="/role/manage" href="#">角色管理</a></li>
-                <li><a rel="#" href="#">菜单管理</a></li>
-                <li><a rel="#" href="#">操作管理</a></li>
+                <li><a rel="/menu/manage" href="#">菜单管理</a></li>
+                <li><a rel="/op/manage" href="#">操作管理</a></li>
+                <li><a rel="#" href="#">权限管理</a></li>
                 <li><a rel="#" href="#">流程管理</a></li>
             </ul>
 

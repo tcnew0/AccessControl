@@ -1,11 +1,14 @@
 package com.zzb.competence.service.Impl;
 
 import com.zzb.competence.dao.BaseDao;
+import com.zzb.competence.entity.Menu;
 import com.zzb.competence.service.BaseService;
 import com.zzb.competence.util.common.Constants;
+import com.zzb.competence.util.common.StringOpUtils;
 import com.zzb.competence.util.context.MyBeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.lang.reflect.ParameterizedType;
 
@@ -69,5 +72,28 @@ public abstract class BaseServiceImpl<T> implements BaseService {
         }
 
         return (F)getMyBeanFactory().getBean(c);
+    }
+
+    /**
+     * delete entity by ids
+     * @param ids
+     */
+    @Transactional
+    public void deleteByIds(String ids){
+
+        // 获取要删除的groupinfo
+        Iterable<T> iterator = getDao().findAll(StringOpUtils.StrToLongList(ids, ","));
+
+        getDao().delete(iterator);
+    }
+
+    /**
+     * save object
+     * @param obj object
+     * @return object
+     */
+    @Transactional
+    public Object save(Object obj){
+        return getDao().save(obj);
     }
 }

@@ -56,6 +56,33 @@ public class Constants {
         public static final String FRAME = "role/role_list_frame";
     }
 
+    /**
+     * 菜单 model view
+     */
+    public static interface MENU_PAGES{
+
+        /**菜单管理主界面 */
+        public static final String MANAGE = "menu/menu_manage";
+
+        /** 菜单管理列表页面　*/
+        public static final String FRAME = "menu/menu_list_frame";
+    }
+
+    /**
+     * 操作 model view
+     */
+    public static interface OP_PAGES{
+
+        /**操作管理主界面 */
+        public static final String MANAGE = "operator/operator_manage";
+
+        /** 操作管理列表页面　*/
+        public static final String FRAME = "operator/operator_list_frame";
+    }
+
+    /**
+     * 项目信息
+     */
     public static interface PROJECT_INFO{
 
         /**base package */

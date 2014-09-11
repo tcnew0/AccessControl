@@ -2,10 +2,8 @@ package com.zzb.competence.service.Impl;
 
 import com.zzb.competence.dao.impl.UserDaoImpl;
 import com.zzb.competence.entity.User;
-import com.zzb.competence.util.common.StringOpUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by zhaozb on 14-5-26.
@@ -20,27 +18,5 @@ public class UserServiceImpl extends BaseServiceImpl<User>{
     public UserDaoImpl getDao() {
         //return getFDao();
         return userDao;
-    }
-
-    /**
-     * save
-     * @return
-     */
-    @Transactional
-    public User save(User user){
-        return userDao.save(user);
-    }
-
-    /**
-     * delete group by ids
-     * @param ids
-     */
-    @Transactional
-    public void deleteByIds(String ids){
-
-        // 获取要删除的groupinfo
-        Iterable<User> iterator = getDao().findAll(StringOpUtils.StrToLongList(ids, ","));
-
-        userDao.delete(iterator);
     }
 }

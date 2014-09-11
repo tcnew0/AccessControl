@@ -27,6 +27,7 @@ import java.util.Calendar;
 @RequestMapping("role")
 public class RoleMngController extends CommonController{
 
+    /** log */
     private static final Logger log = LoggerFactory.getLogger(RoleMngController.class);
 
     /** role service */

@@ -1,5 +1,7 @@
 package com.zzb.competence.entity;
 
+import com.zzb.competence.bean.BaseBean;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -8,7 +10,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="Op_info")
-public class Operator{
+public class Operator extends BaseBean{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;

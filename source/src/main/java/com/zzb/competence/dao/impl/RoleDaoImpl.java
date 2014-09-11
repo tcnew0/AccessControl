@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
 @Repository("roleDao")
 public interface RoleDaoImpl extends BaseDao<Role,Long> {
 
-    @Query("select g from Role g where g.roleName like ?1 and g.roleNum like ?2 order by g.createTime desc")
+    @Query("select g from Role g where g.roleName like ?1  and g.roleNum like ?2 " +
+            "or g.roleName is null or g.roleNum is null order by g.createTime desc")
     public Page<Role> findByRoleNameAndRoleNum(String roleName,String roleNum, Pageable pageable);
 }

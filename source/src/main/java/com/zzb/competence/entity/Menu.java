@@ -1,5 +1,7 @@
 package com.zzb.competence.entity;
 
+import com.zzb.competence.bean.BaseBean;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
@@ -9,7 +11,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name="menu")
-public class Menu {
+public class Menu extends BaseBean{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
