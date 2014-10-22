@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="header.jsp"%>
+<%@ include file="header.jsp" %>
 <html>
 <head>
     <title>菜单权限管理</title>
@@ -37,7 +37,15 @@
                 <li><a rel="/role/manage" href="#">角色管理</a></li>
                 <li><a rel="/menu/manage" href="#">菜单管理</a></li>
                 <li><a rel="/op/manage" href="#">操作管理</a></li>
-                <li><a rel="#" href="#">权限管理</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">权限管理<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">角色人员关联</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">人员菜单关联</a></li>
+                        <li><a href="#">角色菜单关联</a></li>
+                    </ul>
+                </li>
                 <li><a rel="#" href="#">流程管理</a></li>
             </ul>
 
@@ -63,22 +71,22 @@
 <div class="container">
     <div class="row row-offcanvas row-offcanvas-right">
         <%--<div class="col-xs-12 col-sm-9" id="content">--%>
-            <iframe src="/index/iframe" frameborder="0" width="100%" height="850" name="content" id="content"></iframe>
+        <iframe src="/index/iframe" frameborder="0" width="100%" height="850" name="content" id="content"></iframe>
         <%--</div>--%>
 
         <%--<%@include file="frame.jsp"  %>--%>
         <%--<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">--%>
-            <%--<div class="list-group">--%>
-                <%--<a href="#" class="list-group-item active">历史记录</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录1</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录2</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录3</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录4</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录5</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录6</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录7</a>--%>
-                <%--<a href="#" class="list-group-item">历史记录8</a>--%>
-            <%--</div>--%>
+        <%--<div class="list-group">--%>
+        <%--<a href="#" class="list-group-item active">历史记录</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录1</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录2</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录3</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录4</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录5</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录6</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录7</a>--%>
+        <%--<a href="#" class="list-group-item">历史记录8</a>--%>
+        <%--</div>--%>
         <%--</div>--%>
 
     </div>

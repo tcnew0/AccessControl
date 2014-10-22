@@ -1,9 +1,6 @@
 package com.zzb.competence.entity;
 
-import com.alibaba.fastjson.JSON;
 import com.zzb.competence.bean.BaseBean;
-import jdk.nashorn.internal.runtime.JSONFunctions;
-
 import javax.persistence.*;
 import java.util.Date;
 
